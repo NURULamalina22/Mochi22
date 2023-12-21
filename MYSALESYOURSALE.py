@@ -9,7 +9,7 @@ st.write("This app predicts the **Sales Price** type!")
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
-    *('X',min,max,default)
+    #('X',min,max,default)
     TV = st.sidebar.slider('TV', 00, 300, 150)
     Radio = st.sidebar.slider('Radio', 00, 50, 35)
     Newspaper = st.sidebar.slider('Newspaper', 00, 115, 60)
