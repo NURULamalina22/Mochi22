@@ -10,9 +10,9 @@ st.sidebar.header('User Input Parameters')
 
 def user_input_features():
     *('X',min,max,default)
-    TV = st.sidebar.slider('TV', 0.00, 300, 150)
-    Radio = st.sidebar.slider('Radio', 0.00, 50, 35)
-    Newspaper = st.sidebar.slider('Newspaper', 0.00, 115, 60)
+    TV = st.sidebar.slider('TV', 00, 300, 150)
+    Radio = st.sidebar.slider('Radio', 00, 50, 35)
+    Newspaper = st.sidebar.slider('Newspaper', 00, 115, 60)
     data = {'TV': TV,
             'Radio': Radio,
             'Newspaper': Newspaper}
@@ -26,7 +26,6 @@ st.write(df)
 
 loaded_modelSVR = pickle.load(open("SalesNew.h5", "rb"))
 pred = loaded_modelSVR.predict(df)
-
 
 st.subheader('Sales Price Prediction')
 st.write(pred)
