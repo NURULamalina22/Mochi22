@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import seaborn as sns
-
+import pickle
 
 st.write("# Simple Sales Prediction App")
 st.write("This app predicts the **Sales Price** type!")
@@ -24,12 +24,9 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-st.subheader('Prediction')
-st.write(prediction)
-
-st.subheader('Prediction Probability')
-st.write(prediction_proba)
-
 loaded_modelSVR = pickle.load(open("SalesNew.h5", "rb"))
-TV=loaded_modelSVR.predict(df)
-st.write(prediction_proba)
+pred = loaded_modelSVR.predict(df)
+
+
+st.subheader('Sales Price Prediction')
+st.write(pred)
